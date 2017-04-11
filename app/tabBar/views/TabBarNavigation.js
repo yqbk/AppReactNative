@@ -5,7 +5,7 @@ import React from 'react'
 
 // Navigation
 import { addNavigationHelpers } from 'react-navigation'
-import { TabBar } from '../navigationConfiguration't 
+import { TabBar } from '../navigationConfiguration'
 
 //Redux
 import { connect } from 'react-redux'

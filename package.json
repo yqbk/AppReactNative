@@ -9,7 +9,8 @@
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.41.0",
-    "react-native-vector-icons": "^4.0.0",
+    "react-native-textinput-effects": "^0.3.0",
+    "react-native-vector-icons": "^4.0.1",
     "react-navigation": "https://github.com/react-community/react-navigation/tarball/master",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",

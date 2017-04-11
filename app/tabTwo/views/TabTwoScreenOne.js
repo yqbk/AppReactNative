@@ -6,7 +6,8 @@ export default class TabTwoScreenOne extends React.Component {
     return(
       <View style={{
         flex:1,
-        backgroundColor:'yellow',
+        backgroundColor:'white',
+        backgroundColor:'white',
         alignItems:'center',
         justifyContent:'center'
       }}>
@@ -17,18 +18,6 @@ export default class TabTwoScreenOne extends React.Component {
           onPress={() => this.props.navigation.navigate('TestScreen')}
           title="Chat with Lucy"
         />
-
-
-        <TouchableOpacity
-          onPress={ () => this.props.navigation.navigate('TabTwoScreenTwo') }
-          style={{
-            padding:20,
-            borderRadius:20,
-            backgroundColor:'blue',
-            marginTop:20
-          }}>
-          <Text>{'Go to next screen this tab'}</Text>
-        </TouchableOpacity>
 
       </View>
     )
