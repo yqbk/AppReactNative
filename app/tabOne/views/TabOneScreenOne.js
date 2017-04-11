@@ -25,6 +25,8 @@ import {
   Fumi,
 } from 'react-native-textinput-effects';
 
+import MyInput from '../../myInput'
+
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -41,12 +43,25 @@ export default class TabOneScreenOne extends React.Component {
 
         <View style={{
           flex:1,
-          backgroundColor:'#E1F5FE',
+          backgroundColor:'white',
           alignItems:'center',
-          justifyContent:'center'
+          justifyContent:'center',
         }}>
 
           <Text>{ 'Tab One Screen One' }</Text>
+
+          <View style={{
+            height: 100,
+            width: 350,
+            backgroundColor: 'transparent',
+
+          }}>
+
+            <MyInput
+              label={'test'}
+            />
+
+          </View>
 
           <Image
             onPress={ () => this.props.navigation.navigate('TabOneScreenTwo') }
@@ -54,17 +69,29 @@ export default class TabOneScreenOne extends React.Component {
             source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
           />
 
-          <View style={{
-            height: 100,
-            width:350
-          }}>
-            <Sae
-              label={'Email Address'}
-              iconClass={FontAwesomeIcon}
-              iconName={'pencil'}
-              iconColor={'blue'}
-            />
-          </View>
+
+
+          {/*<View style={{*/}
+            {/*height: 200,*/}
+            {/*width:350*/}
+          {/*}}>*/}
+            {/*<Sae*/}
+              {/*label={'Email Address'}*/}
+              {/*iconClass={FontAwesomeIcon}*/}
+              {/*inputStyle={{*/}
+                {/*color: 'black'*/}
+              {/*}}*/}
+            {/*/>*/}
+
+            {/*<Isao*/}
+              {/*label={'First Name'}*/}
+              {/*// this is applied as active border and label color*/}
+              {/*activeColor={'#da7071'}*/}
+              {/*// this is applied as passive border and label color*/}
+              {/*passiveColor={'#dadada'}*/}
+            {/*/>*/}
+
+          {/*</View>*/}
 
           <Button
             onPress={() => this.props.navigation.navigate('TestScreen')}
