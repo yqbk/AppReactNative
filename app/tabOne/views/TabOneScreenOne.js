@@ -33,13 +33,26 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 export default class TabOneScreenOne extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { text: 'Useless Placeholder' };
+    this._onPress = this._onPress.bind(this)
+
+    this.state = {
+      text: 'Useless Placeholder',
+      animation: false
+    };
   }
+
+  _onPress() {
+    if (!this.state.animation) {
+      this.setState({animation:true})
+      this.props.navigation.navigate('TestScreen')
+      this.setState({animation:false})
+    } else {
+      console.log("prevent double clicking buton")
+    }
+  }
+
   render(){
     return(
-
-
-
 
         <View style={{
           flex:1,
@@ -94,7 +107,7 @@ export default class TabOneScreenOne extends React.Component {
           {/*</View>*/}
 
           <Button
-            onPress={() => this.props.navigation.navigate('TestScreen')}
+            onPress={() => this._onPress()}
             title="Chat with Lucy"
           />
 
