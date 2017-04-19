@@ -11,20 +11,6 @@ import {
   StyleSheet
 } from 'react-native'
 
-import {
-  Kaede,
-  Hoshi,
-  Jiro,
-  Isao,
-  Madoka,
-  Akira,
-  Hideo,
-  Kohana,
-  Makiko,
-  Sae,
-  Fumi,
-} from 'react-native-textinput-effects';
-
 import MyInput from '../../myInput'
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
