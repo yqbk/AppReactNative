@@ -13,5 +13,8 @@
   ],
   "rules": {
     // overrides
+    "semi": ["error", "never"],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "prefer-stateless-function": ["error", "never"]
   }
 }

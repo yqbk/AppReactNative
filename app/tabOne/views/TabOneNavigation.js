@@ -1,22 +1,14 @@
-'use strict'
-
-// React
 import React from 'react'
+import { connect } from 'react-redux'
 
-// Navigation
+import Icon from 'react-native-vector-icons/FontAwesome'
+
 import { addNavigationHelpers } from 'react-navigation'
 import { NavigatorTabOne } from '../navigationConfiguration'
 
-// Redux
-import { connect } from 'react-redux'
-
-// Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
-
-
 const mapStateToProps = (state) => {
- return {
-  navigationState: state.tabOne
+  return {
+    navigationState: state.tabOne,
   }
 }
 
@@ -28,14 +20,14 @@ class TabOneNavigation extends React.Component {
   //   }
   // }
 
-  render(){
+  render() {
     const { navigationState, dispatch } = this.props
     return (
       <NavigatorTabOne
         navigation={
           addNavigationHelpers({
             dispatch: dispatch,
-            state: navigationState
+            state: navigationState,
           })
         }
       />
