@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import {
-  AppRegistry,
   Text,
   View,
-  Button
-} from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
-
+  Button,
+} from 'react-native'
 
 export default class TestScreen extends React.Component {
-
   render() {
     // The screen's current route is passed in to `props.navigation.state`:
     return (
@@ -22,6 +18,6 @@ export default class TestScreen extends React.Component {
         />
 
       </View>
-    );
+    )
   }
 }

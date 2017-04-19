@@ -1,19 +1,17 @@
-'use strict'
+
 // React
 import React from 'react'
 // Navigation
 import { addNavigationHelpers } from 'react-navigation'
 import { NavigatorTabThree } from '../navigationConfiguration'
-//Redux
+// Redux
 import { connect } from 'react-redux'
 // Icon
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-const mapStateToProps = (state) => {
- return {
-  navigationState: state.tabThree
-  }
-}
+const mapStateToProps = state => ({
+  navigationState: state.tabThree,
+})
 class TabThreeNavigation extends React.Component {
   // static navigationOptions = {
   //   tabBar:{
@@ -22,13 +20,13 @@ class TabThreeNavigation extends React.Component {
   //   }
   // }
 
-render(){
-    const { dispatch, navigationState} = this.props
-return (
+  render() {
+    const { dispatch, navigationState } = this.props
+    return (
       <NavigatorTabThree
         navigation={addNavigationHelpers({
-          dispatch: dispatch,
-          state: navigationState
+          dispatch,
+          state: navigationState,
         })}
       />
     )

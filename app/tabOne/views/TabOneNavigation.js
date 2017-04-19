@@ -6,11 +6,9 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { addNavigationHelpers } from 'react-navigation'
 import { NavigatorTabOne } from '../navigationConfiguration'
 
-const mapStateToProps = (state) => {
-  return {
-    navigationState: state.tabOne,
-  }
-}
+const mapStateToProps = state => ({
+  navigationState: state.tabOne,
+})
 
 class TabOneNavigation extends React.Component {
   // static navigationOptions = {
@@ -26,7 +24,7 @@ class TabOneNavigation extends React.Component {
       <NavigatorTabOne
         navigation={
           addNavigationHelpers({
-            dispatch: dispatch,
+            dispatch,
             state: navigationState,
           })
         }

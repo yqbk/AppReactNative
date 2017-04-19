@@ -15,6 +15,9 @@
     // overrides
     "semi": ["error", "never"],
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "prefer-stateless-function": ["error", "never"]
+    "react/prop-types": [0],
+    "react/prefer-stateless-function": [0],
+    "prefer-stateless-function": ["error", "never"],
+    "no-underscore-dangle": 0,
   }
 }

@@ -4,24 +4,24 @@ import {
   TextInput,
   View,
   StyleSheet,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from 'react-native'
 
 import BaseInput from './baseInput'
 
-const LABEL_HEIGHT = 24;
-const PADDING = 0;
+const LABEL_HEIGHT = 24
+const PADDING = 0
 
 export default class MyInput extends BaseInput {
 
   static propTyped = {
     height: PropTypes.number,
-    animationDuration : PropTypes.number
+    animationDuration: PropTypes.number,
   }
 
   static defualtProps = {
     height: 48,
-    animationDuration: 300
+    animationDuration: 300,
   }
 
   render() {
@@ -36,80 +36,82 @@ export default class MyInput extends BaseInput {
     const {
       width,
       focusedAnim,
-      value
+      value,
     } = this.state
 
-    return(
+    return (
 
 
-    <View
-      style={{
-        height: 60,
-        width: 350,
-        borderBottomColor: this.state.lineColor,
-        borderBottomWidth: 1,
-      }}
-    >
+      <View
+        style={{
+          height: 60,
+          width: 350,
+          borderBottomColor: this.state.lineColor,
+          borderBottomWidth: 1,
+        }}
+      >
 
 
-      <TouchableWithoutFeedback onPress={() => {console.log("test")}} onPressOut={() => {debugger}}>
-        <Animated.View style={{
-          position: 'absolute',
-          bottom: focusedAnim.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, LABEL_HEIGHT + PADDING],
-          }),
-        }}>
-          <Animated.Text style={[styles.label, labelStyle, {
-            fontSize: focusedAnim.interpolate({
-              inputRange: [0, 1],
-              outputRange: [18, 12],
-            }),
-          }]}>
-            {label}
-          </Animated.Text>
-        </Animated.View>
-      </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={() => { console.log('test') }} onPressOut={() => { debugger }}>
+          <Animated.View
+            style={{
+              position: 'absolute',
+              bottom: focusedAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, LABEL_HEIGHT + PADDING],
+              }),
+            }}
+          >
+            <Animated.Text
+              style={[styles.label, labelStyle, {
+                fontSize: focusedAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [18, 12],
+                }),
+              }]}
+            >
+              {label}
+            </Animated.Text>
+          </Animated.View>
+        </TouchableWithoutFeedback>
 
 
-      <TextInput
-        ref="input"
-        {...this.props}
+        <TextInput
+          ref="input"
+          {...this.props}
         // style={[styles.textInput, inputStyle, {
         //   width,
         //   height: inputHeight,
         // }]}
-        style={{
-          height: 50,
-          width: 350,
-          backgroundColor: 'transparent',
-        }}
-        value={value}
-        onBlur={this._onBlur}
-        onChange={this._onChange}
-        onFocus={this._onFocus}
-        underlineColorAndroid={'transparent'}
-      />
+          style={{
+            height: 50,
+            width: 350,
+            backgroundColor: 'transparent',
+          }}
+          value={value}
+          onBlur={this._onBlur}
+          onChange={this._onChange}
+          onFocus={this._onFocus}
+          underlineColorAndroid={'transparent'}
+        />
 
 
-      {/* bottom border */}
-      <Animated.View
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-          height: 2,
-          width: focusedAnim.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, width],
-          }),
-          backgroundColor: 'red',
-        }}
-      />
+        {/* bottom border */}
+        <Animated.View
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            right: 0,
+            height: 2,
+            width: focusedAnim.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0, width],
+            }),
+            backgroundColor: 'red',
+          }}
+        />
 
-    </View>
-
-
+      </View>
 
 
       // <View>
@@ -144,7 +146,7 @@ const styles = StyleSheet.create({
     color: 'rgb(157,157,157)',
     borderStyle: 'solid',
     borderBottomWidth: 3,
-    borderBottomColor: 'pink'
+    borderBottomColor: 'pink',
   },
   textInput: {
     position: 'absolute',
@@ -155,6 +157,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     borderStyle: 'solid',
     borderBottomWidth: 3,
-    borderBottomColor: 'pink'
+    borderBottomColor: 'pink',
   },
-});
+})

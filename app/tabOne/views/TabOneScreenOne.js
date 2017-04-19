@@ -1,116 +1,75 @@
-'use strict'
 import React from 'react'
 import {
   View,
   Text,
-  TouchableOpacity,
-  TextInput,
   Image,
   Button,
-  ScrollView,
-  StyleSheet
+  StyleSheet,
 } from 'react-native'
 
 import MyInput from '../../myInput'
 
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 
 export default class TabOneScreenOne extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this._onPress = this._onPress.bind(this)
 
     this.state = {
       text: 'Useless Placeholder',
-      animation: false
-    };
+      animation: false,
+    }
   }
 
   _onPress() {
     if (!this.state.animation) {
-      this.setState({animation:true})
+      this.setState({ animation: true })
       this.props.navigation.navigate('TestScreen')
-      this.setState({animation:false})
+      this.setState({ animation: false })
     } else {
-      console.log("prevent double clicking buton")
+      console.log('prevent double clicking buton')
     }
   }
 
-  render(){
-    return(
+  render() {
+    return (
 
-        <View style={{
-          flex:1,
-          backgroundColor:'white',
-          alignItems:'center',
-          justifyContent:'center',
-        }}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'white',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
 
-          <Text>{ 'Tab One Screen One' }</Text>
+        <Text>{ 'Tab One Screen One' }</Text>
 
-          <View style={{
+        <View
+          style={{
             height: 100,
             width: 350,
             backgroundColor: 'transparent',
-
-          }}>
-
-            <MyInput
-              label={'test'}
-            />
-
-          </View>
-
-          <Image
-            onPress={ () => this.props.navigation.navigate('TabOneScreenTwo') }
-            style={{width: 50, height: 50, margin: 20}}
-            source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-          />
-
-
-
-          {/*<View style={{*/}
-            {/*height: 200,*/}
-            {/*width:350*/}
-          {/*}}>*/}
-            {/*<Sae*/}
-              {/*label={'Email Address'}*/}
-              {/*iconClass={FontAwesomeIcon}*/}
-              {/*inputStyle={{*/}
-                {/*color: 'black'*/}
-              {/*}}*/}
-            {/*/>*/}
-
-            {/*<Isao*/}
-              {/*label={'First Name'}*/}
-              {/*// this is applied as active border and label color*/}
-              {/*activeColor={'#da7071'}*/}
-              {/*// this is applied as passive border and label color*/}
-              {/*passiveColor={'#dadada'}*/}
-            {/*/>*/}
-
-          {/*</View>*/}
-
-          <Button
-            onPress={() => this._onPress()}
-            title="Chat with Lucy"
-          />
-
-
-
-
+          }}
+        >
+          <MyInput label={'test'} />
         </View>
 
+        <Image
+          onPress={() => this.props.navigation.navigate('TabOneScreenTwo')}
+          style={{ width: 50, height: 50, margin: 20 }}
+          source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }}
+        />
+        <Button
+          onPress={() => this._onPress()}
+          title="Chat with Lucy"
+        />
 
-
-
-
+      </View>
     )
   }
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -139,5 +98,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     opacity: 0.8,
   },
-});
-
+})

@@ -1,4 +1,4 @@
-'use strict'
+
 import { StackNavigator } from 'react-navigation'
 
 // Screens
@@ -15,13 +15,13 @@ const routeConfiguration = {
   TabThreeScreenThree: { screen: TabThreeScreenThree },
   TabOneScreenOne: { screen: TabOneScreenOne },
   TabOneScreenTwo: { screen: TabOneScreenTwo },
-  TestScreen: {screen: TestScreen}
+  TestScreen: { screen: TestScreen },
 
 }
 // going to disable the header for now
 const stackNavigatorConfiguration = {
   headerMode: 'float',
-  initialRoute: 'TabThreeScreenOne'
+  initialRoute: 'TabThreeScreenOne',
 }
 
-export const NavigatorTabThree = StackNavigator(routeConfiguration,stackNavigatorConfiguration)
+export const NavigatorTabThree = StackNavigator(routeConfiguration, stackNavigatorConfiguration)
