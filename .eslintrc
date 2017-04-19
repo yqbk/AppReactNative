@@ -17,7 +17,6 @@
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/prop-types": [0],
     "react/prefer-stateless-function": [0],
-    "prefer-stateless-function": ["error", "never"],
     "no-underscore-dangle": 0,
   }
 }
