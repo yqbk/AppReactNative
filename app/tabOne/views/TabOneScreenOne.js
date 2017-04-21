@@ -46,16 +46,6 @@ export default class TabOneScreenOne extends React.Component {
 
         <Text>{ 'Tab One Screen One' }</Text>
 
-        <View
-          style={{
-            height: 100,
-            width: 350,
-            backgroundColor: 'transparent',
-          }}
-        >
-          <MyInput label={'test'} />
-        </View>
-
         <Image
           onPress={() => this.props.navigation.navigate('TabOneScreenTwo')}
           style={{ width: 50, height: 50, margin: 20 }}

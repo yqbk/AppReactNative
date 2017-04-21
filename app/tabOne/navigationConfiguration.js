@@ -15,6 +15,7 @@ const routeConfiguration = {
 
 // going to disable the header for now
 const stackNavigatorConfiguration = {
+  mode: 'modal',
   headerMode: 'float',
   initialRoute: 'TabOneScreenOne',
 }
