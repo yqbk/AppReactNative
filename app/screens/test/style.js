@@ -1,53 +1,28 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-    contentContainer: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-start',
-    },
+	container: {
+		flex: 1,
+		backgroundColor: 'white',
+		paddingTop: 32
+	},
+	contentContainer: {
+		flex: 1
+	},
+	input: {
+		height: 40,
+		borderWidth: 1,
+		alignSelf: 'stretch',
+		borderColor: 'grey',
+		paddingLeft: 10,
+	},
 
-    actionContainer: {
-        height: 64,
-        flexDirection: 'row',
-        alignItems: 'stretch',
-        paddingLeft: 16,
-        paddingRight: 16,
-    },
+	actionLinkContainer: {
+		flex: 0.5,
+	},
 
-    background: {
-        flex: 1,
-        width: null,
-        height: null,
-        resizeMode: 'cover',
-    },
+	buttonContainer: {
+		flex: 0.5,
+	}
 
-    text: {
-        marginLeft: 16,
-        marginRight: 16,
-        fontSize: 40,
-        color: 'white',
-        backgroundColor: 'transparent',
-        marginBottom: 80,
-        fontWeight: 'bold',
-    },
-
-    actionLinkContainer: {
-        flex: 0.5,
-        justifyContent: 'center',
-    },
-
-    buttonContainer: {
-        flex: 0.5,
-        justifyContent: 'center',
-    },
-
-    backgroundVideo: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    },
 });

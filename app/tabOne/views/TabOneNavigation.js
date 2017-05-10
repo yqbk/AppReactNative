@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import {Button} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { addNavigationHelpers } from 'react-navigation';
@@ -12,8 +12,15 @@ const mapStateToProps = state => ({
 
 class TabOneNavigation extends React.Component {
     static navigationOptions = {
+        headerRight: <Button title="Info" />,
         tabBarLabel: 'Tab One',
         tabBarIcon: ({ tintColor }) => <Icon size={20} name={'cogs'} color={tintColor} />,
+        tabBarVisible: false,
+        // header: null,
+        // headerStyle: V{
+        //     backgroundColor: 'black',
+        //
+        // },
     }
 
     render() {

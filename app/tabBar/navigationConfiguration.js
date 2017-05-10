@@ -3,6 +3,8 @@ import TabOneNavigation from '../tabOne/views/TabOneNavigation';
 import TabTwoNavigation from '../tabTwo/views/TabTwoNavigation';
 import TabThreeNavigation from '../tabThree/views/TabThreeNavigation';
 
+import { colors } from '../config/styles';
+
 const routeConfiguration = {
     TabOneNavigation: { screen: TabOneNavigation },
     TabTwoNavigation: { screen: TabTwoNavigation },
@@ -10,23 +12,21 @@ const routeConfiguration = {
 };
 
 const tabBarConfiguration = {
-  // ...other configs
     tabBarOptions: {
-    // tint color is passed to text and icons (if enabled) on the tab bar
-        activeTintColor: 'white',
-        inactiveTintColor: '#81D4FA',
-// background color is for the tab component
-        showIcon: true,
         showLabel: false,
-        labelStyle: {
-        },
+        activeTintColor: colors.mainPink,
+        inactiveTintColor: colors.borderGrey,
+        showIcon: true,
+      //  Todo should be deleted
+        headerMode: 'none',
         indicatorStyle: {
-      // todo disable indicator at all
             height: 0,
         },
         style: {
-            height: 40,
-            backgroundColor: '#0288D1',
+            backgroundColor: 'white',
+            borderTopColor: colors.borderGrey,
+            borderTopWidth: 1,
+            height: 52,
         },
     },
     tabBarPosition: 'bottom',

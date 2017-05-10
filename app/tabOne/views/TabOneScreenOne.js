@@ -17,6 +17,12 @@ const GRADIENT = require('./img/gradient.png');
 import styles from './style';
 
 export default class TabOneScreenOne extends React.Component {
+
+
+    static navigationOptions = ({ navigation }) => ({
+        header: null,
+    });
+
     constructor(props) {
         super(props);
         this._onPress = this._onPress.bind(this);
@@ -53,8 +59,7 @@ export default class TabOneScreenOne extends React.Component {
                         <Text style={styles.text}>Landing Page</Text>
                     </View>
                     <View style={styles.actionContainer}>
-                        <View style={styles.actionLinkContainer}>
-                        </View>
+                        <View style={styles.actionLinkContainer} />
                         <View style={styles.buttonContainer}>
                             <Button
                               style={styles.buttonContainer}
