@@ -1,34 +1,34 @@
 
 // React
-import React from 'react'
+import React from 'react';
 // Navigation
-import { addNavigationHelpers } from 'react-navigation'
-import { NavigatorTabThree } from '../navigationConfiguration'
+import { addNavigationHelpers } from 'react-navigation';
+import { NavigatorTabThree } from '../navigationConfiguration';
 // Redux
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 // Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const mapStateToProps = state => ({
-  navigationState: state.tabThree,
-})
+    navigationState: state.tabThree,
+});
 class TabThreeNavigation extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Tab Three',
-    tabBarIcon: ({ tintColor }) => <Icon size={20} name={'umbrella'} color={tintColor} />,
-  }
+    static navigationOptions = {
+        tabBarLabel: 'Tab Three',
+        tabBarIcon: ({ tintColor }) => <Icon size={20} name={'umbrella'} color={tintColor} />,
+    }
 
-  render() {
-    const { dispatch, navigationState } = this.props
-    return (
-      <NavigatorTabThree
-        navigation={addNavigationHelpers({
-          dispatch,
-          state: navigationState,
-        })}
-      />
-    )
-  }
+    render() {
+        const { dispatch, navigationState } = this.props;
+        return (
+            <NavigatorTabThree
+              navigation={addNavigationHelpers({
+                  dispatch,
+                  state: navigationState,
+              })}
+            />
+        );
+    }
 }
 
-export default connect(mapStateToProps)(TabThreeNavigation)
+export default connect(mapStateToProps)(TabThreeNavigation);
