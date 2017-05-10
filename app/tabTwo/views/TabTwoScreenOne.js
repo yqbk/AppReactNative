@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { View, Text, TouchableOpacity, Button } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList, Button } from 'react-native'
 export default class TabTwoScreenOne extends React.Component {
   render() {
     return (
@@ -15,6 +15,14 @@ export default class TabTwoScreenOne extends React.Component {
       >
         <Text>{ 'Tab Two Screen One' }</Text>
 
+
+        <FlatList
+          data={[{ key: 'a' }, { key: 'b' }]}
+          renderItem={({ item }) => <Text>{item.key}</Text>}
+          removeClippedSubviews={false}
+          style={{
+          }}
+        />
 
         <Button
           onPress={() => this.props.navigation.navigate('TestScreen')}

@@ -6,10 +6,10 @@ import {
   Button,
   StyleSheet,
 } from 'react-native'
+import Video from 'react-native-video'
 
-import MyInput from '../../myInput'
-
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+// import MyInput from '../../myInput'
+// import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 
 export default class TabOneScreenOne extends React.Component {
   constructor(props) {
@@ -45,6 +45,14 @@ export default class TabOneScreenOne extends React.Component {
       >
 
         <Text>{ 'Tab One Screen One' }</Text>
+
+        <Video
+          source={require('../../background.mp4')}
+          style={styles.backgroundVideo}
+          rate={1} volume={1} muted
+          resizeMode="cover" repeat
+          key="video"
+        />
 
         <Image
           onPress={() => this.props.navigation.navigate('TabOneScreenTwo')}
@@ -88,4 +96,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     opacity: 0.8,
   },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+
 })

@@ -1,13 +1,12 @@
 
 import { applyMiddleware, combineReducers, createStore } from 'redux'
-import logger from 'redux-logger'
 
 import { NavigatorTabOne } from './tabOne/navigationConfiguration'
 import { NavigatorTabTwo } from './tabTwo/navigationConfiguration'
 import { NavigatorTabThree } from './tabThree/navigationConfiguration'
 import { TabBar, tabBarReducer } from './tabBar/navigationConfiguration'
 
-const middleware = () => applyMiddleware(logger())
+const middleware = () => applyMiddleware()
 
 export default createStore(
   combineReducers({
