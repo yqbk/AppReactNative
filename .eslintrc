@@ -1,22 +1,13 @@
 {
   "parser": "babel-eslint",
-  "env": {
-    "browser": true
-  },
-  "plugins": [
-    "react"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "airbnb"
-  ],
+  "extends": "airbnb",
   "rules": {
-    // overrides
-    "semi": ["error", "never"],
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": [0],
-    "react/prefer-stateless-function": [0],
-    "no-underscore-dangle": 0,
+    "indent": [ 2, 4 ],
+    "react/jsx-indent": [ 2, 4 ],
+    "react/jsx-filename-extension": 0,
+    "no-shadow": "off",
+    "max-len": [1, 140],
+    "arrow-body-style": "off",
+    "import/prefer-default-export": "off"
   }
 }
