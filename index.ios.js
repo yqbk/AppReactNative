@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import store from './app/store'
 // Navigation
 import TabBarNavigation from './app/tabBar/views/TabBarNavigation'
-import TestScreen from './app/testScreen'
+import TestScreen from './app/screens/test/testScreen'
 
 
 class SampleNavigation extends React.Component {

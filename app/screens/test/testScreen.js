@@ -9,7 +9,7 @@ import {
 import Video from 'react-native-video'
 import styles from './style'
 
-const GRADIENT = require('./gradient.png')
+const GRADIENT = require('./img/gradient.png')
 
 
 export default class TestScreen extends React.Component {
@@ -19,13 +19,13 @@ export default class TestScreen extends React.Component {
 
 
       <View style={styles.backgroundVideo}>
-        {/*<Video*/}
-          {/*source={require('./background.mp4')}*/}
-          {/*style={styles.backgroundVideo}*/}
-          {/*rate={1} volume={1} muted*/}
-          {/*resizeMode="cover" repeat*/}
-          {/*key="video"*/}
-        {/*/>*/}
+        <Video
+          source={require('./img/background.mp4')}
+          style={styles.backgroundVideo}
+          rate={1} volume={1} muted
+          resizeMode="cover" repeat
+          key="video"
+        />
         <Image source={GRADIENT} style={styles.background}>
 
           <View style={styles.contentContainer}>

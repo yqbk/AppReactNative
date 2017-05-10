@@ -7,7 +7,7 @@ import TabThreeScreenTwo from './views/TabThreeScreenTwo'
 import TabThreeScreenThree from './views/TabThreeScreenThree'
 import TabOneScreenOne from '../tabOne/views/TabOneScreenOne'
 import TabOneScreenTwo from '../tabOne/views/TabOneScreenTwo'
-import TestScreen from '../testScreen'
+import TestScreen from '../screens/test/testScreen'
 
 const routeConfiguration = {
   TabThreeScreenOne: { screen: TabThreeScreenOne },

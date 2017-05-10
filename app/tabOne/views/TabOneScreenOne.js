@@ -47,7 +47,7 @@ export default class TabOneScreenOne extends React.Component {
         <Text>{ 'Tab One Screen One' }</Text>
 
         <Video
-          source={require('../../background.mp4')}
+          source={require('../../screens/test/img/background.mp4')}
           style={styles.backgroundVideo}
           rate={1} volume={1} muted
           resizeMode="cover" repeat
