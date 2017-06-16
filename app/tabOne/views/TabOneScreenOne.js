@@ -3,8 +3,8 @@ import {
   View,
   Text,
   Image,
-  Button,
   StyleSheet,
+  Button
 } from 'react-native';
 
 import Video from 'react-native-video';
@@ -15,6 +15,7 @@ import Video from 'react-native-video';
 
 const GRADIENT = require('./img/gradient.png');
 import styles from './style';
+// import Button from '../../components/button/Button';
 
 export default class TabOneScreenOne extends React.Component {
 
@@ -66,6 +67,14 @@ export default class TabOneScreenOne extends React.Component {
                               onPress={() => this._onPress()}
                               title="Login"
                             />
+
+                            {/*<Button*/}
+                              {/*state={Button.state.default}*/}
+                              {/*appearance={Button.appearance.primary}*/}
+                              {/*text="text"*/}
+                              {/*iconFamily={Button.iconFamily.login}*/}
+                              {/*onPress={() => this._onPress()}*/}
+                            {/*/>*/}
                         </View>
                     </View>
                 </Image>

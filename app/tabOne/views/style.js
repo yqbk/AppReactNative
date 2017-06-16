@@ -41,6 +41,7 @@ export default StyleSheet.create({
     buttonContainer: {
         flex: 0.5,
         justifyContent: 'center',
+        // backgroundColor: 'white',
     },
 
     backgroundVideo: {

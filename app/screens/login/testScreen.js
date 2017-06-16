@@ -38,7 +38,7 @@ export default class TestScreen extends React.Component {
                 <View style={styles.buttonContainer}>
                     <Button
                       style={styles.buttonContainer}
-                      onPress={() => this.props.navigation.navigate('TabOneScreenOne')}
+                      onPress={() => this.props.navigation.navigate('TabThreeScreenOne')}
                       title="Go to screen one"
                     />
                 </View>
