@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button, Image, Picker } from 'react-native';
 import { connect } from 'react-redux';
+
+import FlipCard from 'react-native-flip-card';
+
 import { skipLogin } from './../../state/auth/actions';
 
 import SwipeCards from 'react-native-swipe-cards';
 
-// import styles from './style';
+import styles from './style';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Video from 'react-native-video';
 
@@ -15,7 +18,19 @@ const Card = React.createClass({
         return (
             <View style={styles.card}>
                 {/* <Image style={styles.thumbnail} source={{uri: this.props.image}} />*/}
-                <Text style={styles.text}>This is card {this.props.name}</Text>
+
+                <FlipCard style={styles.flipCard}>
+                    {/* Face Side */}
+                    <View style={styles.face}>
+                        <Text style={styles.text}>This is card {this.props.name}</Text>
+
+                    </View>
+                    {/* Back Side */}
+                    <View style={styles.back}>
+                        <Text style={styles.text}>This is card {this.props.name}</Text>
+                    </View>
+                </FlipCard>
+
             </View>
         );
     },
@@ -59,15 +74,6 @@ class Main extends React.Component {
     render() {
         return (
             <View>
-
-                <Picker
-                  selectedValue={this.state.language}
-                  onValueChange={(itemValue, itemIndex) => this.setState({ language: itemValue })}
-                >
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                </Picker>
-
                 <SwipeCards
                   cards={this.state.cards}
 
@@ -80,44 +86,44 @@ class Main extends React.Component {
                   hasMaybeAction
                 />
 
-                <Button title="Notify" onPress={console.log('clicked')} />
+                {/*<Button title="Notify" onPress={console.log('clicked')} />*/}
             </View>
         );
     }
 
 }
-
-const styles = StyleSheet.create({
-    card: {
-        marginTop: 100,
-        marginBottom: 100,
-        width: 300,
-        height: 300,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 5,
-        overflow: 'hidden',
-        borderColor: 'grey',
-        backgroundColor: 'white',
-        borderWidth: 1,
-        elevation: 1,
-    },
-    thumbnail: {
-        flex: 1,
-        width: 300,
-        height: 300,
-    },
-    text: {
-        fontSize: 20,
-        paddingTop: 10,
-        paddingBottom: 10,
-    },
-    noMoreCards: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+//
+// const styles = StyleSheet.create({
+//     card: {
+//         marginTop: 100,
+//         marginBottom: 100,
+//         width: 300,
+//         height: 300,
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         borderRadius: 5,
+//         overflow: 'hidden',
+//         borderColor: 'grey',
+//         backgroundColor: 'white',
+//         borderWidth: 1,
+//         elevation: 1,
+//     },
+//     thumbnail: {
+//         flex: 1,
+//         width: 300,
+//         height: 300,
+//     },
+//     text: {
+//         fontSize: 20,
+//         paddingTop: 10,
+//         paddingBottom: 10,
+//     },
+//     noMoreCards: {
+//         flex: 1,
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//     },
+// });
 
 
 const mapDispatchToProps = {
